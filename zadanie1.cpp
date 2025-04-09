@@ -30,19 +30,19 @@ int main()
     ofstream outbin("a.bin", ios_base::binary);
     arr.writeBin(outbin);
     ifstream inbin("a.bin", ios_base::binary);
+    
     int month;
     cout << "\nEnter month: ";
-    
     cin >> month;
     bool found = false;
     for (int i = 0; i < 8; i++) {
         if (arr[i].data[1] == month) {
-            std::cout << arr[i] << "\n";
+            cout << arr[i] << "\n";
             found = true;
         }
     }
     if (!found) {
-        std::cout << "No people born in this month.\n";
+        cout << "No people born in this month.\n";
     }
     return 0;
 }
