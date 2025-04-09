@@ -1,13 +1,13 @@
 #pragma once
 #include <fstream>
 #include "sortcomp.h"
-using namespace std; //для френда
+using namespace std; //Г¤Г«Гї ГґГ°ГҐГ­Г¤Г 
 template <class T>
 class My_Array
 {
 private:
-	T* arr; // массив какого угодно типа
-	int* a; // массив целых чисел
+	T* arr; // Г¬Г Г±Г±ГЁГў ГЄГ ГЄГ®ГЈГ® ГіГЈГ®Г¤Г­Г® ГІГЁГЇГ 
+	int* a; // Г¬Г Г±Г±ГЁГў Г¶ГҐГ«Г»Гµ Г·ГЁГ±ГҐГ«
 	int n; 
 public:
 	My_Array();
@@ -62,7 +62,7 @@ template<class T>
 inline My_Array<T>::My_Array(int n)
 {
 	this->n = n;
-	arr = new T[this->n]; //выделили память
+	arr = new T[this->n]; //ГўГ»Г¤ГҐГ«ГЁГ«ГЁ ГЇГ Г¬ГїГІГј
 }
 
 template<class T>
@@ -125,8 +125,3 @@ inline void My_Array<T>::readBin(ifstream& os)
 	os.read((char*)arr, sizeof(T) * n);
 	os.close();
 }
-
-//template<class T>
-//inline void  My_Array<T>::sort(bool(*comp)(T&, T&)) {
-//	insert(arr, n, comp);
-//}
