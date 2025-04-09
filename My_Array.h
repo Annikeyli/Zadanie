@@ -19,19 +19,7 @@ public:
 	void sort(bool(*comp)(T&, T&)) {
 		insert(arr, n, comp);
 	}
-	/*ofstream& writeBin(ofstream& os) {
-		os.write((char*)arr, n);
-		return os;
-	}
-	ifstream& readBin(ifstream& is) {
-		is.seekg(0, ios_base::end);
-		n = is.tellg();
-		n = n / sizeof(T);
-		arr = new T[n];
-		is.seekg(0, ios_base::beg);
-		is.read((char*)arr, n*sizeof(T));
-		return is;
-	}*/
+	
 	friend ostream& operator<<(ostream& os, const My_Array<T>& a) {
 		for (int i = 0; i <a.n; i++)
 			os << a[i]<<"\n";
