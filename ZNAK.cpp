@@ -2,8 +2,8 @@
 #include <iostream>
 #include "zodiak.h"
 Znak::Znak() {}
-Znak::Znak(const char* n, const char* s,Zodiak z, int day, int month, int year) {// наз конструктор, метод, несёт имя класса, ничего не возвращает
-    strcpy_s(surname, s);// функция для копирования символов из одной строки в другую ; где хранится скопир строка, исходная строка
+Znak::Znak(const char* n, const char* s,Zodiak z, int day, int month, int year) {// Г­Е•Г§ Д™Г®Г­Е„Е€Д‘ГіД™Е€Г®Д‘, Д›ДєЕ€Г®Г¤, Г­ДєЕ„ВёЕ€ ДЌД›Л™ Д™Г«Е•Е„Е„Е•, Г­ДЌГ·ДєДѓГ® Г­Дє ГўГ®Г§ГўД‘Е•ЕЇЕ•ДєЕ€
+    strcpy_s(surname, s);// ГґГіГ­Д™Г¶ДЌЛ™ Г¤Г«Л™ Д™Г®ДЏДЌД‘Г®ГўЕ•Г­ДЌЛ™ Е„ДЌД›ГўГ®Г«Г®Гў ДЌГ§ Г®Г¤Г­Г®Г© Е„Е€Д‘Г®Д™ДЌ Гў Г¤Д‘ГіДѓГіЕЈ ; ДѓГ¤Дє Е‘Д‘Е•Г­ДЌЕ€Е„Л™ Е„Д™Г®ДЏДЌД‘ Е„Е€Д‘Г®Д™Е•, ДЌЕ„Е‘Г®Г¤Г­Е•Л™ Е„Е€Д‘Г®Д™Е•
     strcpy_s(name, n);
     zodiak = z;
     data[0] = day;
@@ -65,16 +65,3 @@ istream& operator>>(istream& is, Znak& m) {
     
     return is;
 }
-
-
-
-
-
-//Znak(const char* n, const char* s, const char* z, int* d) {// наз конструктор, метод, несёт имя класса, ничего не возвращает
-//    strcpy_s(surname, s);// функция для копирования символов из одной строки в другую ; где хранится скопир строка, исходная строка
-//    strcpy_s(name, n);
-//    strcpy_s(zz, z);
-//    data[0] = d[0];
-//    data[1] = d[1];
-//    data[2] = d[2];
-//}// same  с массивом
